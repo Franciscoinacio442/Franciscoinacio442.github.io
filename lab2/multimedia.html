@@ -1,9 +1,33 @@
 <!doctype html>
 <html lang="pt">
   <head>
+    <style>
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .fotografias img {
+        width: 150px;
+        border-radius: 20px;
+      }
+
+      .poema p:nth-child(odd) {
+        color: #2c3e50;
+        font-weight: bold;
+      }
+
+      .poema p:nth-child(even) {
+        color: #2980b9;
+        font-style: italic;
+      }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Setúbal - Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -17,6 +41,61 @@
     </header>
 
     <main>
+      <h2>Multimédia</h2>
+      <p>Nesta página encontra conteúdos multimédia.</p>
+
+      <!-- Secção de Âncoras -->
+      <p>
+        <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
+        <a href="#poema">Poema</a>
+      </p>
+
+      <!-- Secção de Fotografias -->
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/1x1.jpeg" alt="Baixa de Setúbal" />
+          <img src="images/1x2.jpeg" alt="Serra da Arrábida" />
+          <img src="images/1x3.jpeg" alt="Praia da Figueirinha" />
+          <img src="images/1x4.jpeg" alt="Estuário do Sado" />
+          <img src="images/1x5.jpeg" alt="Forte de São Filipe" />
+          <img src="images/1x6.jpeg" alt="Mercado do Livramento" />
+          <img src="images/1x7.jpeg" alt="Praça do Bocage" />
+          <img src="images/1x8.jpeg" alt="Choco Frito" />
+        </div>
+      </section>
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ED9P64jN844"
+          title="Setúbal"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <!-- Secção de Poesia -->
+      <section>
+        <h3 id="poema">Poesia</h3>
+        <div class="poema">
+          <p>Setúbal, cidade bela,</p>
+          <p>Entre a serra e o mar azul,</p>
+          <p>És de Portugal a estrela,</p>
+          <p>A brilhar mais a sul.</p>
+        </div>
+      </section>
       <h2>Multimédia</h2>
       <p>Galeria de fotografias e vídeos de Setúbal e da Arrábida.</p>
     </main>
