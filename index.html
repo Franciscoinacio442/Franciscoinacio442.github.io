@@ -3,51 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primeira Página</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Portefólio DIW - Francisco Inácio</title>
+    <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Primeira Página Web!</h1>
-    </header>
-
     <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a
-          href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
-          target="_blank"
-        >
-          Desenvolvimento de Interfaces Web </a
-        >, abordaremos as seguintes tecnologias Web &#127760;:
-      </p>
+      <section id="hero">
+        <nav>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Disciplina</a></li>
+          </ul>
+        </nav>
 
-      <h2>Linguagens e Ferramentas</h2>
+        <div class="hero-content">
+          <h1>Bem-vindo ao Meu Portefólio</h1>
+          <p>Transformamos ideias em experiências web criativas.</p>
+          <a href="#projetos" class="btn">Ver Projetos</a>
+        </div>
+      </section>
 
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
+      <section id="projetos">
+        <h2>Os Meus Projetos</h2>
+        <p>
+          (No próximo passo vamos substituir este texto pelos cartões com links
+          para o Lab 1, Lab 2 e Lab 3)
+        </p>
+      </section>
 
-      <p>Iremos criar soluções criativas!</p>
-      <img
-        src="images/diw.svg"
-        alt="Desenvolvimento de Interfaces Web"
-        style="width: 300px"
-      />
-      <nav>
+      <section id="disciplina">
+        <h2>Sobre a Disciplina</h2>
+        <p>Eis a minha primeira página Web!</p>
+        <p>
+          Na Unidade Curricular de
+          <a
+            href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
+            target="_blank"
+          >
+            Desenvolvimento de Interfaces Web </a
+          >, abordaremos as seguintes tecnologias Web &#127760;:
+        </p>
+
+        <h3>Linguagens e Ferramentas</h3>
         <ul>
-          <li><a href="lab1/index.html">Lab1</a></li>
-          <li><a href="lab2/index.html">Lab2</a></li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React e Next.js</li>
         </ul>
-      </nav>
-    </main>
 
-    <footer>
-      <p>Universidade Lusófona &copy; 2025</p>
-    </footer>
+        <p>Iremos criar soluções criativas!</p>
+        <img
+          src="images/diw.svg"
+          alt="Desenvolvimento de Interfaces Web"
+          style="width: 300px; margin-top: 20px"
+        />
+      </section>
+    </main>
   </body>
 </html>

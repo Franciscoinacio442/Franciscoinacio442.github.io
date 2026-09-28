@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eaeaea;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #27ae60;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+nav {
+  background-color: #222;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #27ae60;
+}
+
+main {
+  background-color: white;
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.video-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.video-content h2 {
+  font-size: 4em;
+  margin: 0;
+}
+
+.video-content p {
+  font-size: 1.5em;
+}
+
+.parallax {
+  background-image: url('images/1x3.jpeg');
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.galeria-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.img-transicao {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-transicao:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.poema-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+.poema-container p:nth-child(odd) {
+  color: #2c3e50;
+  font-weight: bold;
+  text-align: center;
+}
+
+.poema-container p:nth-child(even) {
+  color: #e67e22;
+  font-style: italic;
+  text-align: center;
+}
+
+.localizacao-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.texto-cidade {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.mapa-cidade {
+  flex: 1;
+  width: 100%;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-grid {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.texto1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.img1 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  padding: 0;
+}
+
+.vazio1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.texto2 {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.img2 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  padding: 0;
+}
+
+.vazio2 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  nav a {
+    text-align: center;
+    background-color: #333;
+  }
+
+  main {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .localizacao-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid-info {
+    grid-template-columns: 1fr;
+  }
+
+  .texto1, .img1, .vazio1, .texto2, .img2, .vazio2 {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .vazio1, .vazio2 {
+    display: none;
+  }
+}
