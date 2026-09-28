@@ -96,26 +96,6 @@ footer {
   font-size: 1.5em;
 }
 
-.parallax {
-  background-image: url('images/1x3.jpeg');
-  height: 400px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.parallax-content {
-  background-color: rgb(0 0 0 / 60%);
-  color: white;
-  padding: 30px;
-  text-align: center;
-  border-radius: 10px;
-}
-
 .galeria-flex {
   display: flex;
   flex-flow: row wrap;
@@ -136,24 +116,6 @@ footer {
   transform: scale(1.15);
   box-shadow: 0 12px 20px rgb(0 0 0 / 30%);
   cursor: pointer;
-}
-
-.poema-container {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.2em;
-}
-
-.poema-container p:nth-child(odd) {
-  color: #2c3e50;
-  font-weight: bold;
-  text-align: center;
-}
-
-.poema-container p:nth-child(even) {
-  color: #e67e22;
-  font-style: italic;
-  text-align: center;
 }
 
 .localizacao-container {
@@ -242,43 +204,6 @@ footer {
   box-shadow: none;
 }
 
-.destaque-sec {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  background-color: black;
-}
-
-.destaque-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-}
-
-.destaque-txt-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-
-.destaque-h2 {
-  color: white;
-  font-size: 6vw;
-  margin: 0;
-  text-shadow: 2px 2px 5px rgb(0 0 0 / 80%);
-}
-
-.destaque-p {
-  color: #ddd;
-  font-size: 2vw;
-  margin-top: 10px;
-}
-
 .fotografias-sec {
   min-height: 80vh;
   padding: 60px 20px;
@@ -320,20 +245,7 @@ footer {
   border: none;
 }
 
-.poesia-sec {
-  min-height: 80vh;
-  padding: 60px 20px;
-  background-color: #fff3e0;
-}
-
-.poesia-h3 {
-  text-align: center;
-  font-size: 3vw;
-  color: #d35400;
-  margin-bottom: 40px;
-}
-
-@media (width <= 600px) {
+@media (max-width: 600px) {
   nav {
     flex-direction: column;
     align-items: stretch;
@@ -360,12 +272,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .texto1, .img1, .vazio1, .texto2, .img2, .vazio2 {
+  .texto1,
+  .img1,
+  .vazio1,
+  .texto2,
+  .img2,
+  .vazio2 {
     grid-column: 1 / -1;
     grid-row: auto;
   }
 
-  .vazio1, .vazio2 {
+  .vazio1,
+  .vazio2 {
     display: none;
   }
 }
