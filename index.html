@@ -3,84 +3,72 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portefólio DIW - Francisco Inácio</title>
+    <title>Portefólio - Francisco Inácio</title>
     <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <main>
-      <section id="hero">
-        <nav>
-          <ul>
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#disciplina">Disciplina</a></li>
-          </ul>
-        </nav>
-
-        <div class="hero-content">
-          <h1>Bem-vindo ao Meu Portefólio</h1>
-          <p>Transformamos ideias em experiências web criativas.</p>
-          <a href="#projetos" class="btn">Ver Projetos</a>
-        </div>
-      </section>
-
-      <section id="projetos" class="projetos-section">
-        <div class="projetos-header">
-          <h2>Projetos / Labs</h2>
-          <p>
-            Alguns dos trabalhos desenvolvidos ao longo da Unidade Curricular.
-          </p>
-        </div>
-
-        <div class="cards-container">
-          <div class="card">
-            <h3>Lab 1</h3>
-            <p>A minha cidade utilizando HTML.</p>
-            <a href="lab1/index.html">Ver Lab 1</a>
-          </div>
-
-          <div class="card">
-            <h3>Lab 2</h3>
-            <p>A minha cidade utilizando HTML e CSS.</p>
-            <a href="lab2/index.html">Ver Lab 2</a>
-          </div>
-
-          <div class="card">
-            <h3>Lab 3</h3>
-            <p>Landing page responsiva com HTML5 e CSS.</p>
-            <a href="lab3/index.html">Ver Lab 3</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="disciplina">
-        <h2>Sobre a Disciplina</h2>
-        <p>Eis a minha primeira página Web!</p>
-        <p>
-          Na Unidade Curricular de
-          <a
-            href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
-            target="_blank"
-          >
-            Desenvolvimento de Interfaces Web </a
-          >, abordaremos as seguintes tecnologias Web &#127760;:
-        </p>
-
-        <h3>Linguagens e Ferramentas</h3>
+    <section id="hero">
+      <h1>Bem-vindo ao Meu Portefólio</h1>
+      <nav>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React e Next.js</li>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#disciplina">Disciplina</a></li>
+          <li><a href="tutoriais.html">Tutoriais</a></li>
         </ul>
+      </nav>
+    </section>
 
-        <p>Iremos criar soluções criativas!</p>
-        <img
-          src="images/diw.svg"
-          alt="Desenvolvimento de Interfaces Web"
-          style="width: 300px; margin-top: 20px"
-        />
-      </section>
-    </main>
+    <section id="projetos" class="seccao-labs">
+      <h2>Projetos / Labs</h2>
+      <p class="subtitulo">
+        Trabalhos práticos desenvolvidos na disciplina de DIW.
+      </p>
+
+      <div class="contentor-cartoes">
+        <article class="cartao">
+          <h3>Lab 1</h3>
+          <p>A minha cidade - Estruturação de página com elementos HTML.</p>
+          <a href="lab1/index.html">Ver Lab 1</a>
+        </article>
+
+        <article class="cartao">
+          <h3>Lab 2</h3>
+          <p>
+            A minha cidade - Aplicação de estilos, cores e formatação visual com
+            CSS.
+          </p>
+          <a href="lab2/index.html">Ver Lab 2</a>
+        </article>
+
+        <article class="cartao">
+          <h3>Lab 3</h3>
+          <p>
+            Landing page moderna com Flexbox, CSS Grid e conteúdos Multimédia.
+          </p>
+          <a href="lab3/index.html">Ver Lab 3</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="disciplina">
+      <h2>Sobre a Disciplina</h2>
+      <p>Eis a minha primeira página Web!</p>
+      <p>
+        Na Unidade Curricular de
+        <a href="https://moodle.ensinolusofona.pt" target="_blank"
+          >Desenvolvimento de Interfaces Web</a
+        >, abordaremos as seguintes tecnologias:
+      </p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>DIW 2026 - Francisco Inácio</p>
+    </footer>
   </body>
 </html>
