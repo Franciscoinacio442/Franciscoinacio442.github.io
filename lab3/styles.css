@@ -8,6 +8,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
+
 header {
   background-color: #27ae60;
   color: white;
@@ -33,9 +35,13 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
   background-color: #27ae60;
 }
+
+
 
 main {
   background-color: white;
@@ -46,6 +52,8 @@ main {
   box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
 }
 
+
+
 footer {
   background-color: #222;
   color: white;
@@ -54,8 +62,11 @@ footer {
   margin-top: 20px;
 }
 
+
+
 .video-section {
   position: relative;
+  isolation: isolate;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -66,20 +77,17 @@ footer {
 
 .video-bg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   object-fit: cover;
 }
 
 .video-content {
   position: relative;
   z-index: 1;
+  max-width: calc(100% - 40px);
   color: white;
   text-align: center;
   background: rgb(0 0 0 / 50%);
@@ -88,13 +96,15 @@ footer {
 }
 
 .video-content h2 {
-  font-size: 4em;
+  font-size: clamp(2rem, 5vw, 4rem);
   margin: 0;
 }
 
 .video-content p {
-  font-size: 1.5em;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
+
+
 
 .galeria-flex {
   display: flex;
@@ -105,6 +115,7 @@ footer {
 
 .img-transicao {
   width: 250px;
+  max-width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 15px;
@@ -115,10 +126,11 @@ footer {
 }
 
 .img-transicao:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   box-shadow: 0 12px 20px rgb(0 0 0 / 30%);
-  cursor: pointer;
 }
+
+
 
 .localizacao-container {
   display: flex;
@@ -129,80 +141,145 @@ footer {
 
 .texto-cidade {
   flex: 1;
+  min-width: 0;
   font-size: 1.1em;
   line-height: 1.6;
 }
 
 .mapa-cidade {
   flex: 1;
+  min-width: 0;
   width: 100%;
 }
 
-.grid-info {
+.iframe-mapa {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+
+
+.info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "cidade imagem"
+    ". imagem"
+    "tabela tabela"
+    "curiosidades curiosidades";
   gap: 20px;
   padding: 20px;
 }
 
-.item-grid {
+.info-cartao {
+  min-width: 0;
   background-color: #f9f9f9;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.item-grid img {
+.info-cartao h3 {
+  margin-top: 0;
+}
+
+.info-cartao p,
+.info-cartao li {
+  line-height: 1.6;
+}
+
+.info-cidade {
+  grid-area: cidade;
+}
+
+
+.info-imagem {
+  grid-area: imagem;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.info-imagem img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 280px;
   object-fit: cover;
-  border-radius: 4px;
 }
 
-.texto1 {
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
+.info-imagem figcaption {
+  padding: 15px 20px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.img1 {
-  grid-column: 3 / 5;
-  grid-row: 1 / 3;
-  padding: 0;
+
+
+.info-dados {
+  grid-area: tabela;
 }
 
-.vazio1 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  background-color: transparent;
-  box-shadow: none;
+.info-tabela-container {
+  overflow-x: auto;
 }
 
-.texto2 {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+.info-tabela {
+  width: 100%;
+  min-width: 450px;
+  border-collapse: collapse;
+  text-align: center;
 }
 
-.img2 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  padding: 0;
+.info-tabela th,
+.info-tabela td {
+  border: 1px solid #777;
+  padding: 14px 10px;
 }
 
-.vazio2 {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
-  background-color: transparent;
-  box-shadow: none;
+.info-tabela th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
 }
+
+.info-tabela td {
+  background-color: white;
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.info-tabela a {
+  color: #0000ee;
+  overflow-wrap: anywhere;
+}
+
+/* CURIOSIDADES */
+
+.info-curiosidades {
+  grid-area: curiosidades;
+}
+
+.info-curiosidades ul {
+  padding-left: 22px;
+  margin-bottom: 0;
+}
+
+.info-curiosidades li {
+  margin-bottom: 12px;
+}
+
+.info-curiosidades li:last-child {
+  margin-bottom: 0;
+}
+
+
 
 .main-multimedia {
   padding: 0;
   max-width: 100%;
   margin: 0;
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -214,7 +291,7 @@ footer {
 
 .fotografias-h3 {
   text-align: center;
-  font-size: 3vw;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: #333;
   margin-bottom: 40px;
 }
@@ -227,25 +304,24 @@ footer {
 }
 
 .video-h3 {
-  font-size: 3vw;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: #27ae60;
   margin-bottom: 40px;
 }
 
 .iframe-video {
+  display: block;
   width: 100%;
   max-width: 800px;
-  height: 450px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
   border: none;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
-.iframe-mapa {
-  width: 100%;
-  height: 450px;
-  border: none;
-}
+
 
 @media (max-width: 600px) {
   nav {
@@ -270,22 +346,29 @@ footer {
     text-align: center;
   }
 
-  .grid-info {
-    grid-template-columns: 1fr;
+  .info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "cidade"
+      "imagem"
+      "tabela"
+      "curiosidades";
+    padding: 0;
   }
 
-  .texto1,
-  .img1,
-  .vazio1,
-  .texto2,
-  .img2,
-  .vazio2 {
-    grid-column: 1 / -1;
-    grid-row: auto;
+  .info-cartao {
+    padding: 16px;
   }
 
-  .vazio1,
-  .vazio2 {
-    display: none;
+  .info-imagem {
+    padding: 0;
+  }
+
+  .info-imagem img {
+    height: 220px;
+  }
+
+  .video-content {
+    padding: 20px;
   }
 }

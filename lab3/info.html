@@ -6,46 +6,148 @@
     <title>Setúbal - Informação</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
       <h1>Setúbal</h1>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="local.html">Localização</a>
         <a href="multimedia.html">Multimédia</a>
-        <a href="info.html">Informação</a>
+        <a href="info.html" aria-current="page">Informação</a>
       </nav>
     </header>
+
     <main>
       <h2>Informações e Curiosidades</h2>
-      <div class="grid-info">
-        <div class="item-grid texto1">
+
+      <p>
+        Descubra os principais dados estatísticos e algumas curiosidades sobre a
+        cidade de Setúbal.
+      </p>
+
+      <div class="info-grid">
+        <section class="info-cartao info-cidade">
           <h3>A Cidade</h3>
+
           <p>
             Setúbal é um local fantástico, com paisagens únicas entre a serra e
             o mar.
           </p>
-        </div>
-        <div class="item-grid img1">
+
+          <p>
+            Conhecida pelo choco frito, pela serra, pelas praias e pela tradição
+            piscatória, a cidade tem uma forte ligação ao estuário do Sado.
+          </p>
+        </section>
+
+        <figure class="info-cartao info-imagem">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Set%C3%BAbal_-_Portugal_%284589315682%29.jpg/800px-Set%C3%BAbal_-_Portugal_%284589315682%29.jpg"
-            alt="Vista da Cidade"
+            src="https://cdn.pixabay.com/photo/2015/07/26/12/23/europe-861042_1280.jpg"
+            alt="Vista da costa da Arrábida, com praias entre a serra e o mar"
+            width="1280"
+            height="960"
           />
-        </div>
-        <div class="item-grid vazio1"></div>
-        <div class="item-grid img2">
-          <img
-            src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80"
-            alt="Fauna e Flora"
-          />
-        </div>
-        <div class="item-grid texto2">
-          <h3>Fauna e Flora</h3>
-          <p>Explore a vida marinha incrível da região e a sua natureza.</p>
-        </div>
-        <div class="item-grid vazio2"></div>
+
+          <figcaption>
+            A paisagem da Arrábida, em Setúbal. Fotografia:
+            <a
+              href="https://pixabay.com/photos/europe-portugal-setubal-relax-sand-861042/"
+            >
+              miguelalexandre609 / Pixabay </a
+            >.
+          </figcaption>
+        </figure>
+
+        <section class="info-cartao info-dados">
+          <h3 id="titulo-dados">Dados sobre Setúbal</h3>
+
+          <div
+            class="info-tabela-container"
+            role="region"
+            aria-labelledby="titulo-dados"
+            tabindex="0"
+          >
+            <table class="info-tabela" aria-labelledby="titulo-dados">
+              <tbody>
+                <tr>
+                  <th rowspan="2" scope="rowgroup">Demografia</th>
+                  <th scope="row">População</th>
+                  <td>123 519 hab. (município)</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Densidade populacional</th>
+                  <td>536 hab/km²</td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <th rowspan="2" scope="rowgroup">Geografia</th>
+                  <th scope="row">Área</th>
+                  <td>230,33 km²</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Região</th>
+                  <td>Península de Setúbal</td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <th scope="row">Website</th>
+                  <td colspan="2">
+                    <a href="https://www.mun-setubal.pt/">
+                      www.mun-setubal.pt
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="info-cartao info-curiosidades">
+          <h3>5 Curiosidades sobre Setúbal</h3>
+
+          <ul>
+            <li>
+              <strong>Baía de Golfinhos:</strong>
+              O estuário do Sado abriga uma comunidade residente de golfinhos
+              roazes.
+            </li>
+
+            <li>
+              <strong>Berço de Figuras Ilustres:</strong>
+              Setúbal é a terra natal do poeta Bocage e da cantora lírica Luísa
+              Todi.
+            </li>
+
+            <li>
+              <strong>A Capital do Choco Frito:</strong>
+              O choco frito é um dos pratos mais emblemáticos da cidade,
+              atraindo muitos visitantes.
+            </li>
+
+            <li>
+              <strong>Clube das Belas Baías:</strong>
+              A Baía de Setúbal pertence ao Clube das Mais Belas Baías do Mundo
+              desde 2002.
+            </li>
+
+            <li>
+              <strong>Natureza Única:</strong>
+              O Parque Natural da Arrábida destaca-se pela vegetação
+              mediterrânica e pela paisagem que combina a serra com o mar.
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
+
     <footer>
       <p>DIW 2026</p>
     </footer>
