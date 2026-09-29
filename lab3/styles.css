@@ -378,3 +378,45 @@ footer {
 .pagina-multimedia footer {
   margin-top: 0;
 }
+.pagina-multimedia {
+  isolation: isolate;
+}
+
+.pagina-multimedia::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #287eaa url("images/barco.jpg") 40% center / cover no-repeat;
+  pointer-events: none;
+}
+
+.pagina-multimedia .main-multimedia {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.parallax-mar {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+#titulo-multimedia {
+  margin: 0;
+  color: white;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-shadow: 0 3px 12px rgb(0 0 0 / 70%);
+}
+
+.pagina-multimedia footer {
+  margin-top: 0;
+}

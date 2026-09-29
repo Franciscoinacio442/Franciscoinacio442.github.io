@@ -6,43 +6,47 @@
     <title>Setúbal - Multimédia</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body class="pagina-multimedia">
     <header>
       <h1>Setúbal</h1>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="local.html">Localização</a>
-        <a href="multimedia.html">Multimédia</a>
+        <a href="multimedia.html" aria-current="page">Multimédia</a>
         <a href="info.html">Informação</a>
       </nav>
     </header>
+
     <main class="main-multimedia">
-      <section
-        class="parallax-mar"
-        aria-label="Barco a navegar sobre águas azuis"
-      ></section>
+      <section class="parallax-mar" aria-labelledby="titulo-multimedia">
+        <h2 id="titulo-multimedia">SETUBAL</h2>
+      </section>
+
       <section class="fotografias-sec">
         <h2 class="fotografias-h3">Galeria de Fotografias</h2>
+
         <div class="galeria-flex">
           <img
             src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=600&q=80"
-            alt="Foto 1"
+            alt="Barco à vela no mar"
             class="img-transicao"
           />
           <img
             src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80"
-            alt="Foto 2"
+            alt="Vista aérea de ondas junto à praia"
             class="img-transicao"
           />
           <img
             src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=600&q=80"
-            alt="Foto 3"
+            alt="Praia ao pôr do sol"
             class="img-transicao"
           />
         </div>
       </section>
-      <section class="video-sec">
-        <h2 class="video-h3">Vídeo Aéreo</h2>
+
+      <section class="video-sec" aria-label="Vídeo de Setúbal">
         <iframe
           class="iframe-video"
           src="https://www.youtube.com/embed/ED9P64jN844"
@@ -51,6 +55,7 @@
         ></iframe>
       </section>
     </main>
+
     <footer>
       <p>DIW 2026</p>
     </footer>
