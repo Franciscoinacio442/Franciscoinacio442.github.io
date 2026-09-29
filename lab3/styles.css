@@ -360,7 +360,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: #287eaa url("images/mar-parallax.jpg") center / cover no-repeat;
+  background: #287eaa url("images/barco.jpg") center / cover no-repeat;
   pointer-events: none;
 }
 
