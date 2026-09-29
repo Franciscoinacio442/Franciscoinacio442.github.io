@@ -6,7 +6,7 @@
     <title>Setúbal - Multimédia</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="pagina-multimedia">
     <header>
       <h1>Setúbal</h1>
       <nav>
@@ -17,20 +17,12 @@
       </nav>
     </header>
     <main class="main-multimedia">
-      <section class="video-section">
-        <video muted loop playsinline class="video-bg">
-          <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="video-content">
-          <h2>Oceano Profundo</h2>
-          <p>A imensidão do mar</p>
-        </div>
-      </section>
+      <section
+        class="parallax-mar"
+        aria-label="Barco a navegar sobre águas azuis"
+      ></section>
       <section class="fotografias-sec">
-        <h3 class="fotografias-h3">Galeria de Fotografias</h3>
+        <h2 class="fotografias-h3">Galeria de Fotografias</h2>
         <div class="galeria-flex">
           <img
             src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=600&q=80"
@@ -50,7 +42,7 @@
         </div>
       </section>
       <section class="video-sec">
-        <h3 class="video-h3">Vídeo Aéreo</h3>
+        <h2 class="video-h3">Vídeo Aéreo</h2>
         <iframe
           class="iframe-video"
           src="https://www.youtube.com/embed/ED9P64jN844"

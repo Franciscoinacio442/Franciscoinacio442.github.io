@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -7,8 +8,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
-
 
 header {
   background-color: #27ae60;
@@ -35,13 +34,16 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
+.info-tabela a {
+  color: #00e;
+  overflow-wrap: anywhere;
+}
+
 nav a:hover,
 nav a:focus-visible,
 nav a[aria-current="page"] {
   background-color: #27ae60;
 }
-
-
 
 main {
   background-color: white;
@@ -52,8 +54,6 @@ main {
   box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
 }
 
-
-
 footer {
   background-color: #222;
   color: white;
@@ -61,8 +61,6 @@ footer {
   padding: 15px;
   margin-top: 20px;
 }
-
-
 
 .video-section {
   position: relative;
@@ -104,8 +102,6 @@ footer {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-
-
 .galeria-flex {
   display: flex;
   flex-flow: row wrap;
@@ -129,8 +125,6 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 12px 20px rgb(0 0 0 / 30%);
 }
-
-
 
 .localizacao-container {
   display: flex;
@@ -157,8 +151,6 @@ footer {
   height: 450px;
   border: none;
 }
-
-
 
 .info-grid {
   display: grid;
@@ -193,7 +185,6 @@ footer {
   grid-area: cidade;
 }
 
-
 .info-imagem {
   grid-area: imagem;
   margin: 0;
@@ -214,8 +205,6 @@ footer {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-
-
 
 .info-dados {
   grid-area: tabela;
@@ -249,12 +238,6 @@ footer {
   font-weight: bold;
 }
 
-.info-tabela a {
-  color: #0000ee;
-  overflow-wrap: anywhere;
-}
-
-/* CURIOSIDADES */
 
 .info-curiosidades {
   grid-area: curiosidades;
@@ -272,8 +255,6 @@ footer {
 .info-curiosidades li:last-child {
   margin-bottom: 0;
 }
-
-
 
 .main-multimedia {
   padding: 0;
@@ -321,9 +302,7 @@ footer {
   box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
-
-
-@media (max-width: 600px) {
+@media (width <= 600px) {
   nav {
     flex-direction: column;
     align-items: stretch;
@@ -371,4 +350,31 @@ footer {
   .video-content {
     padding: 20px;
   }
+}
+.pagina-multimedia {
+  isolation: isolate;
+}
+
+.pagina-multimedia::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #287eaa url("images/mar-parallax.jpg") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.pagina-multimedia .main-multimedia {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.parallax-mar {
+  height: 100vh;
+  height: 100svh;
+}
+
+.pagina-multimedia footer {
+  margin-top: 0;
 }
