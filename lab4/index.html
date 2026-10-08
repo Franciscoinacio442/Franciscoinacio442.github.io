@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 — JavaScript</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Lab 4 — JavaScript</h1>
+      <p>Explora Setúbal com eventos e interatividade.</p>
+
+      <nav>
+        <a href="../index.html">Voltar ao portefólio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. Passa por aqui!</h2>
+
+        <p
+          id="mensagem"
+          onmouseover="mostrarMensagem()"
+          onmouseout="reporMensagem()"
+        >
+          Passa o rato sobre este texto.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Pinta-me!</h2>
+
+        <p id="texto-colorido">Setúbal: entre a serra e o mar.</p>
+
+        <button type="button" onclick="pintarTexto('red')">Red</button>
+        <button type="button" onclick="pintarTexto('green')">Green</button>
+        <button type="button" onclick="pintarTexto('blue')">Blue</button>
+      </section>
+
+      <section>
+        <h2>3. Experimenta escrever</h2>
+
+        <label for="escrita">Escreve uma mensagem:</label>
+        <input id="escrita" type="text" oninput="mudarCorCampo()" />
+      </section>
+
+      <section>
+        <h2>4. Escolhe a cor de fundo</h2>
+
+        <form onsubmit="alterarFundo(event)">
+          <label for="cor-fundo">
+            Escreve uma cor em inglês, como pink, blue ou yellow:
+          </label>
+
+          <input id="cor-fundo" type="text" required />
+          <button type="submit">Submeter</button>
+        </form>
+
+        <p id="resultado-cor" role="status"></p>
+      </section>
+
+      <section>
+        <h2>5. Conta os cliques</h2>
+
+        <button type="button" onclick="contar()">Conta!</button>
+
+        <button type="button" ondblclick="reiniciarContador()">
+          Duplo clique para repor
+        </button>
+
+        <p id="contador" role="status">Contagem: 0</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026 — Francisco Inácio</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
