@@ -17,8 +17,7 @@ const idade = document.querySelector("#idade");
 const resposta = document.querySelector("#resposta");
 
 const contadorAutomatico = document.querySelector("#contador-automatico");
-const direcaoFlex = document.querySelector("#direcao-flex");
-const containerBolas = document.querySelector("#container-bolas");
+
 
 const cores = ["lightblue", "lightyellow", "lightpink", "lightgray"];
 const chaveContador = "lab5-contador";
@@ -120,9 +119,7 @@ function atualizarContadorAutomatico() {
   contadorAutomatico.textContent = segundos;
 }
 
-function alterarDirecao() {
-  containerBolas.style.flexDirection = this.value;
-}
+
 
 
 // 3. EVENTOS
@@ -143,7 +140,6 @@ botaoReset.addEventListener("click", reporContador);
 
 formulario.onsubmit = apresentarPessoa;
 
-direcaoFlex.addEventListener("change", alterarDirecao);
 
 
 // 4. INICIALIZAÇÃO

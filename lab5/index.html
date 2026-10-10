@@ -4,7 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 5 — JavaScript</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      #container-bolas {
+        display: flex;
+        gap: 10px;
+        height: 200px;
+        background-color: #ddd;
+      }
+
+      .bola {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: purple;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -36,22 +56,22 @@
       <p>
         <label for="cor-fundo">4. Escolhe uma cor de fundo:</label>
         <select id="cor-fundo">
-          <option value="lavender">Lilás</option>
           <option value="white">Branco</option>
+          <option value="lavender">Lilás</option>
           <option value="lightpink">Rosa</option>
           <option value="lightblue">Azul-claro</option>
         </select>
       </p>
 
       <p>
-        5.
-       <p>
-  5. Contador:
-  <button id="botao-contar" type="button">Incrementar</button>
-  <button id="botao-decrementar" type="button">Decrementar</button>
-  <button id="botao-reset" type="button">Reset</button>
-  <span id="contador" role="status">0</span>
-</p>
+        5. Contador:
+        <button id="botao-contar" type="button">Incrementar</button>
+        <button id="botao-decrementar" type="button">Decrementar</button>
+        <button id="botao-reset" type="button">Reset</button>
+        <span id="contador" role="status">0</span>
+      </p>
+
+      <form id="formulario">
         <p>6. Apresenta-te!</p>
 
         <p>
@@ -72,7 +92,6 @@
             id="idade"
             name="idade"
             type="number"
-            placeholder="Insere a tua idade"
             min="0"
             max="120"
             step="1"
@@ -88,26 +107,6 @@
         7. Contador automático:
         <span id="contador-automatico">0</span>
       </p>
-      <section aria-labelledby="titulo-flex">
-        <h2 id="titulo-flex">8. Experimenta o Flexbox</h2>
-
-        <p>
-          <label for="direcao-flex">Escolhe a direção:</label>
-          <select id="direcao-flex">
-            <option value="row">Linha</option>
-            <option value="row-reverse">Linha invertida</option>
-            <option value="column">Coluna</option>
-            <option value="column-reverse">Coluna invertida</option>
-          </select>
-        </p>
-
-        <div id="container-bolas">
-          <span class="bola">1</span>
-          <span class="bola">2</span>
-          <span class="bola">3</span>
-          <span class="bola">4</span>
-        </div>
-      </section>
     </main>
 
     <footer>
