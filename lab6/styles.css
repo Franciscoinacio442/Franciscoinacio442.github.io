@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 800px;
+  background-color: #f2f2f2;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  min-width: 0;
+  padding: 8px;
+  font: inherit;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  margin-left: 10px;
+}
+#botao-reset {
+  padding: 8px;
+  font: inherit;
+}
