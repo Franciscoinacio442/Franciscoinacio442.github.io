@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Loja</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -17,11 +18,18 @@
     </header>
 
     <main>
-      <section id="produtos"></section>
+      <section id="produtos">
+        <h2>Produtos</h2>
+        <div id="lista-produtos"></div>
+      </section>
 
-      <section id="cesto"></section>
+      <section id="cesto">
+        <h2>Cesto de compras</h2>
+        <div id="produtos-selecionados"></div>
+        <p id="total">Total: 0.00 €</p>
+      </section>
     </main>
     <script src="produtos.js"></script>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
