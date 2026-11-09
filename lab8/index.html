@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja DEISI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Loja DEISI</h1>
+      <nav aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#cesto">Cesto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="produtos" aria-labelledby="titulo-produtos">
+        <h2 id="titulo-produtos">Produtos</h2>
+
+        <div id="controlos-produtos">
+          <label for="filtro-categoria">Filtrar por categoria:</label>
+          <select id="filtro-categoria">
+            <option value="">Todas as categorias</option>
+          </select>
+
+          <label for="ordenar-preco">Ordenar pelo preço:</label>
+          <select id="ordenar-preco">
+            <option value="">Ordem original</option>
+            <option value="crescente">Preço crescente</option>
+            <option value="decrescente">Preço decrescente</option>
+          </select>
+
+          <label for="pesquisa-produto">Procurar produto:</label>
+          <input
+            id="pesquisa-produto"
+            type="search"
+            placeholder="Pesquise por produto"
+          />
+        </div>
+
+        <p id="estado-categorias" role="status" aria-live="polite"></p>
+        <p id="estado-produtos" role="status" aria-live="polite">
+          A carregar produtos...
+        </p>
+        <div id="lista-produtos"></div>
+      </section>
+
+      <section id="cesto" aria-labelledby="titulo-cesto">
+        <h2 id="titulo-cesto">Cesto de compras</h2>
+        <div id="produtos-selecionados"></div>
+        <p id="total">Total: 0,00 €</p>
+
+        <form id="form-compra">
+          <h3>Finalizar compra</h3>
+          <p>
+            <label for="nome-cliente">Nome:</label>
+            <input id="nome-cliente" name="name" type="text" required />
+          </p>
+          <p>
+            <label for="estudante-deisi">
+              <input id="estudante-deisi" name="student" type="checkbox" />
+              Sou estudante do DEISI
+            </label>
+          </p>
+          <p>
+            <label for="cupao">Cupão (opcional):</label>
+            <input id="cupao" name="coupon" type="text" />
+          </p>
+          <button id="botao-comprar" type="submit">Comprar</button>
+          <p id="resultado-compra" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
